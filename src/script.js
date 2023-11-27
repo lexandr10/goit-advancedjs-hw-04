@@ -13,7 +13,7 @@ async function handlerGetMorePhoto(evt) {
   page += 1;
   const search = elements.form.elements.searchQuery.value;
   const resp = await serviceImage(search, page);
-  if (elements.list.children.length >= resp.totalHits) {
+  if (page === 12) {
     alert("We're sorry, but you've reached the end of search results.");
     elements.btnLoadMore.classList.replace('load-more', 'load-more-hidden');
   } else {
