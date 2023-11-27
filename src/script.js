@@ -29,7 +29,6 @@ async function handlerGetPhoto(evt) {
   elements.btnLoadMore.classList.replace('load-more', 'load-more-hidden');
   try {
     const result = await serviceImage(value);
-    console.log(result);
     if (result.hits.length === 0) {
       return alert(
         '"Sorry, there are no images matching your search query. Please try again."'
