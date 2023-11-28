@@ -43,6 +43,7 @@ async function handlerGetMorePhoto(evt) {
       title: 'Hey',
       message: "We're sorry, but you've reached the end of search results.",
     });
+    elements.list.insertAdjacentHTML('beforeend', createMarckup(hits));
     elements.btnLoadMore.classList.replace('load-more', 'load-more-hidden');
   } else {
     elements.list.insertAdjacentHTML('beforeend', createMarckup(hits));
